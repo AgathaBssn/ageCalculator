@@ -1,3 +1,94 @@
-.main{
-  background-color: blue;
+//Variable couleur
+$accent: #864cff;
+$text : #000;
+$text-secondary : #898989;
+$background : #f0f0f0;
+//import font from fonts folder
+@import url('fonts/Poppins-Regular.ttf');
+@import url('fonts/Poppins-ExtraBoldItalic.ttf');
+@import url('fonts/Poppins-ExtraBold.ttf');
+@import url('fonts/Poppins-BoldItalic.ttf');
+@import url('fonts/Poppins-Bold.ttf');
+
+//Variable police 
+$font: 'Poppins-ExtraBoldItalic', sans-serif;
+
+
+body{
+  background-color: $background;
+  
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  .top{
+    min-height: calc(100vh - 12.8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .main{
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 15px 15px 110px 15px;
+      .inputs{
+        display: flex;
+        gap: 12px;
+        .input{
+          color: #898989;
+          font-family: 'Poppins', sans-serif;
+          font-size: 7px;
+          font-weight: 700;
+          text-transform: uppercase;
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          width: 70px;
+          input{
+            color: #000;
+            font-family: "Poppins", sans-serif;
+            font-weight: 900;
+            padding: 6px;
+            border: #dedede solid 1px;
+            border-radius: 2px;
+          }
+        }
+      }
+      .separator{
+        display: flex;
+        margin-top: 5px;
+        .separator-line{
+          border: solid 1px #dedede;
+          width: 275px;
+          margin: 25px 0px;
+        }
+        .separator-image{
+          background-color: $accent;
+          width: 50px;
+          height: 50px;
+          border-radius: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      .result{
+        font-family: 'Poppins-ExtraBoldItalic', sans-serif;
+        font-weight: 900;
+        font-size: 54px;
+        font-style: oblique;
+        .result-line{
+          display: flex;  
+          p{
+            margin: 0;
+          }
+          :first-child{
+            color: $accent;
+            letter-spacing: 10px;
+          }
+          :last-child{
+            letter-spacing: -2px;
+          }
+        }
+      }
+      }
+  }
 }
