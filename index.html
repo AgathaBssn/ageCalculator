@@ -6,9 +6,10 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="assets/global.css">
-  
-  <title>Frontend Mentor | Age calculator app</title>
 
+  <script type="text/javascript" src="assets/app.js"></script>
+  <title>Frontend Mentor | Age calculator app</title>
+  
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -21,34 +22,34 @@
     <div class="inputs">
       <div class="input">
         <label for="day">Day</label>
-        <input type="number" id="day" name="day" placeholder="DD" >
+        <input type="number" id="day" name="day" placeholder="DD" value="20">
       </div>
       <div class="input">
         <label for="month">Month</label>
-        <input type="number" id="month" name="month" placeholder="MM">
+        <input type="number" id="month" name="month" placeholder="MM" value="08">
       </div>
       <div class="input">
         <label for="year">Year</label>
-        <input type="number" id="year" name="year" placeholder="YYYY">
+        <input type="number" id="year" name="year" placeholder="YYYY" value="2002">
       </div>
     </div>
     <div class="separator">
       <div class="separator-line"></div>
-      <a class="separator-image">
+      <button onclick="calculator()" class="separator-image">
         <img src="assets/images/icon-arrow.svg" height="24px" width="26px">
-      </a>
+      </button>
     </div>
     <div class="result">
       <div class="result-line">
-        <p>--</p>
+        <p id="yearP">--</p>
         <p>years</p>
       </div>
       <div class="result-line">
-        <p>--</p>
+        <p id="monthP">--</p>
         <p>months</p>
       </div>
       <div class="result-line">
-        <p>--</p>
+        <p id="dayP">--</p>
         <p>days</p>
       </div>
       

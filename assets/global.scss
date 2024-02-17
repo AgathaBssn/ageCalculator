@@ -4,11 +4,14 @@ $text : #000;
 $text-secondary : #898989;
 $background : #f0f0f0;
 //import font from fonts folder
-@import url('fonts/Poppins-Regular.ttf');
-@import url('fonts/Poppins-ExtraBoldItalic.ttf');
-@import url('fonts/Poppins-ExtraBold.ttf');
-@import url('fonts/Poppins-BoldItalic.ttf');
-@import url('fonts/Poppins-Bold.ttf');
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-Regular.ttf');
+}
+@font-face {
+    font-family: 'Poppins-ExtraBoldItalic';
+    src: url('fonts/Poppins-ExtraBoldItalic.ttf');
+}
 
 //Variable police 
 $font: 'Poppins-ExtraBoldItalic', sans-serif;
@@ -83,13 +86,14 @@ body{
         font-size: 54px;
         font-style: oblique;
         .result-line{
+          line-height: 60px;
           display: flex;  
           p{
             margin: 0;
           }
           :first-child{
             color: $accent;
-            letter-spacing: 10px;
+            letter-spacing: 5px;
           }
           :last-child{
             letter-spacing: -2px;
