@@ -20,22 +20,25 @@
 <div class="top">
   <div class="main">
     <div class="inputs">
-      <div class="input">
+      <div class="input" id="input-day" aria-invalid="false">
         <label for="day">Day</label>
         <input type="number" id="day" name="day" placeholder="DD" value="20">
+        <span role="alert" class="nameError" id="nameErrorDay" aria-hidden="true">Must be a valid day</span>
       </div>
       <div class="input">
         <label for="month">Month</label>
         <input type="number" id="month" name="month" placeholder="MM" value="08">
+        <span role="alert" class="nameError" id="nameErrorMonth" aria-hidden="true">Must be a valid month</span>
       </div>
       <div class="input">
         <label for="year">Year</label>
         <input type="number" id="year" name="year" placeholder="YYYY" value="2002">
+        <span role="alert" class="nameError" id="nameErrorYear" aria-hidden="true">Must be a valid year</span>
       </div>
     </div>
     <div class="separator">
       <div class="separator-line"></div>
-      <button onclick="calculator()" class="separator-image">
+      <button onclick="checkForm()" class="separator-image">
         <img src="assets/images/icon-arrow.svg" height="24px" width="26px">
       </button>
     </div>

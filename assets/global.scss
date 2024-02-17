@@ -53,6 +53,13 @@ body{
             border: #dedede solid 1px;
             border-radius: 2px;
           }
+          .nameError {
+            display: none;
+            font-size: 0.8em;
+          }
+          .nameError.visible {
+            display: block;
+          }
         }
       }
       .separator{
