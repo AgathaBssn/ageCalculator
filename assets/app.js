@@ -15,7 +15,7 @@ function checkForm(){
         thisError.style.display = 'none';
     }
     
-    let testPassed = false;
+    let testPassed = true;
     //initialisation des inputs
     unconvert('day');
     unconvert('month');
@@ -29,6 +29,7 @@ function checkForm(){
 
     //Test if inputs filled
     if (day === '' || month === '' || year === ''){
+        testPassed = false;
         let errorMssg = 'This field is required';
         if (day === ''){
             convertInRed('day');
@@ -45,17 +46,20 @@ function checkForm(){
     }
     //valid format
     if (!(day >= 1 && day <= 31) && day !== ''){
+        testPassed = false;
         let errorMssg = 'Must be a valid day';
         convertInRed('day');
         document.getElementById('nameErrorDay').textContent = errorMssg;
     } 
     if (!(month >= 1 && month <= 12) && month !== ''){
+        testPassed = false;
         let errorMssg = 'Must be a valid month';
         convertInRed('month');
         document.getElementById('nameErrorMonth').textContent = errorMssg;
     }
     let thisYear = new Date().getFullYear();
     if (year > thisYear){
+        testPassed = false;
         let errorMssg = 'Must be in the past';
         convertInRed('year');
         document.getElementById('nameErrorYear').textContent = errorMssg;
@@ -75,10 +79,9 @@ function checkForm(){
     }
     //fonction test date exist
     const daysInMonth = (year, month) => new Date(year, month, 0).getDate();
-    if (day <= daysInMonth(year, month)){
-        testPassed = true;
-    }else{
+    if (day > daysInMonth(year, month)){
         invalidDate();
+        testPassed = false;
     }
     
     //if all tests passed
