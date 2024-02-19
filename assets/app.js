@@ -45,6 +45,18 @@ function checkForm(){
         convertInRed('year');
         document.getElementById('nameErrorYear').textContent = errorMssg;
     }
+    //date exist
+    if (dateInput.getTime() === dateInput.getTime()){
+        let errorMssg = 'Must be a valid date';
+        convertInRed('day');
+        
+        document.getElementById('month').style.borderColor = '#ff4b4b';
+        document.getElementById('input-month').style.color = '#ff4b4b';
+        document.getElementById('year').style.borderColor = '#ff4b4b';
+        document.getElementById('input-year').style.color = '#ff4b4b';
+        
+        document.getElementById('nameErrorDay').textContent = errorMssg;
+    }
         
     
 }
