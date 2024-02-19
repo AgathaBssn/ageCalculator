@@ -43,9 +43,9 @@ body{
           text-transform: uppercase;
           display: flex;
           flex-direction: column;
-          gap: 4px;
+          gap: 2px;
           width: 70px;
-          height: 60px;
+          height: 45px;
           input{
             color: #000;
             font-family: "Poppins", sans-serif;
@@ -53,6 +53,14 @@ body{
             padding: 6px;
             border: #dedede solid 1px;
             border-radius: 3px;
+          }
+          input[type=number]:focus{
+            outline: 1px solid $accent;
+          }
+          input::-webkit-outer-spin-button,
+          input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
           }
           .nameError {
             display: none;
@@ -68,10 +76,9 @@ body{
       }
       .separator{
         display: flex;
-        margin-top: 5px;
         .separator-line{
           border: solid 1px #dedede;
-          width: 275px;
+          width: 295px;
           margin: 25px 0;
         }
         .separator-image{

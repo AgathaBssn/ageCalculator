@@ -29,12 +29,12 @@ function checkForm(){
         }
     }
     //valid format
-    if ((day >= 32 || day <= 0) && day !== ''){
+    if (!(day >= 1 && day <= 31) && day !== ''){
         let errorMssg = 'Must be a valid day';
         convertInRed('day');
         document.getElementById('nameErrorDay').textContent = errorMssg;
     } 
-    if ((month >= 13 || month <= 0) && month !== ''){
+    if (!(month >= 1 && month <= 12) && month !== ''){
         let errorMssg = 'Must be a valid month';
         convertInRed('month');
         document.getElementById('nameErrorMonth').textContent = errorMssg;
