@@ -18,13 +18,13 @@ function checkForm(){
         if (month === '') {
             document.getElementById('month').style.borderColor = '#ff4b4b';
             let thisError = document.getElementById('nameErrorMonth');
-            document.getElementById('nameErrorMonth').value = errorMssg;
+            document.getElementById('nameErrorMonth').textContent = errorMssg;
             thisError.style.display = 'block';
         }
         if (year === '') {
             document.getElementById('year').style.borderColor = '#ff4b4b';
             let thisError = document.getElementById('nameErrorYear');
-            document.getElementById('nameErrorYear').value = errorMssg;
+            document.getElementById('nameErrorYear').textContent = errorMssg;
             thisError.style.display = 'block';
         }
     }
