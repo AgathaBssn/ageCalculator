@@ -1,17 +1,32 @@
 
 function checkForm(){
-    //getDate
-    let day = document.getElementById('day').value;
-    let month = document.getElementById('month').value;
-    let year = document.getElementById('year').value;
-    let dateInput = new Date(year, month, day);
+
     //convert in red
-    function convertInRed(day){
+    function convertInRed(day){ 
         document.getElementById(day).style.borderColor = '#ff4b4b';
         document.getElementById('input-' + day).style.color = '#ff4b4b';
         let thisError = document.getElementById('nameError' + day.charAt(0).toUpperCase() + day.slice(1));
         thisError.style.display = 'block';
     }
+    function unconvert(day){
+        document.getElementById(day).style.borderColor = '#e6e6e6';
+        document.getElementById('input-' + day).style.color = '#000';
+        let thisError = document.getElementById('nameError' + day.charAt(0).toUpperCase() + day.slice(1));
+        thisError.style.display = 'none';
+    }
+    
+    let testPassed = false;
+    //initialisation des inputs
+    unconvert('day');
+    unconvert('month');
+    unconvert('year');
+    //getDate
+    let day = document.getElementById('day').value;
+    let month = document.getElementById('month').value;
+    let year = document.getElementById('year').value;
+    let dateInput = new Date(year, month-1 , day);
+
+
     //Test if inputs filled
     if (day === '' || month === '' || year === ''){
         let errorMssg = 'This field is required';
@@ -46,7 +61,8 @@ function checkForm(){
         document.getElementById('nameErrorYear').textContent = errorMssg;
     }
     //date exist
-    if (dateInput.getTime() === dateInput.getTime()){
+    //fonction d'affichage
+    function invalidDate(){
         let errorMssg = 'Must be a valid date';
         convertInRed('day');
         
@@ -57,15 +73,25 @@ function checkForm(){
         
         document.getElementById('nameErrorDay').textContent = errorMssg;
     }
-        
+    //fonction test date exist
+    const daysInMonth = (year, month) => new Date(year, month, 0).getDate();
+    if (day <= daysInMonth(year, month)){
+        testPassed = true;
+    }else{
+        invalidDate();
+    }
     
+    //if all tests passed
+    if (testPassed){
+        calculator();
+    }    
 }
 function calculator() {
     //date de naissance en input
     let day = document.getElementById('day').value;
     let month = document.getElementById('month').value;
     let year = document.getElementById('year').value;
-    console.log(day, month, year)
+    
     //date du jour
     let today = new Date();
     let todayDay = today.getDate();
