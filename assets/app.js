@@ -24,7 +24,6 @@ function checkForm(){
     let day = document.getElementById('day').value;
     let month = document.getElementById('month').value;
     let year = document.getElementById('year').value;
-    let dateInput = new Date(year, month-1 , day);
 
 
     //Test if inputs filled
@@ -101,7 +100,6 @@ function calculator() {
     let todayMonth = today.getMonth() + 1;
     let todayYear = today.getFullYear();
     
-    let diff = today.getTime() - new Date(year, month, day).getTime();
     
         //date à renvoyer en prennant en compte les années bissextiles
     let yearDiff = todayYear - year;
