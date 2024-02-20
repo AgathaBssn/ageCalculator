@@ -1,0 +1,29 @@
+@media only screen and (max-width: 375px) {
+  body {
+    .top {
+      min-height: calc(100vh - 30px);
+      .main {
+        .inputs{
+          .input{
+            width: 60px;
+          }
+        }
+        .separator {
+          .separator-line {
+            width: 200px;
+          }
+        }
+        .result{
+          font-size: 45px;
+          
+          .result-line{
+            line-height: 1.1;
+          }
+        }
+      }
+    }
+    .attribution{
+      font-size: 11px;
+    }
+  }
+}
