@@ -1,7 +1,7 @@
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 428px) {
   body {
     .top {
-      min-height: calc(100vh - 30px);
+      min-height: calc(100vh - 90px);
       .main {
         .inputs{
           .input{
@@ -10,7 +10,7 @@
         }
         .separator {
           .separator-line {
-            width: 200px;
+            width: 250px;
           }
         }
         .result{
