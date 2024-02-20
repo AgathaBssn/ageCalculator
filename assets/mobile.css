@@ -1,0 +1,22 @@
+@media only screen and (max-width: 375px) {
+  body .top {
+    min-height: calc(100vh - 30px);
+  }
+  body .top .main .inputs .input {
+    width: 60px;
+  }
+  body .top .main .separator .separator-line {
+    width: 200px;
+  }
+  body .top .main .result {
+    font-size: 45px;
+  }
+  body .top .main .result .result-line {
+    line-height: 1.1;
+  }
+  body .attribution {
+    font-size: 11px;
+  }
+}
+
+/*# sourceMappingURL=mobile.css.map */

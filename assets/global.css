@@ -1,0 +1,129 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: "Poppins-ExtraBoldItalic";
+  src: url("fonts/Poppins-ExtraBoldItalic.ttf");
+}
+body {
+  background-color: #f0f0f0;
+  overflow: hidden;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+body .top {
+  min-height: calc(100vh - 22.8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .top .main {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px 15px 110px 15px;
+}
+body .top .main .inputs {
+  display: flex;
+  gap: 12px;
+}
+body .top .main .inputs .input {
+  color: #898989;
+  font-family: "Poppins", sans-serif;
+  font-size: 7px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 70px;
+  height: 45px;
+}
+body .top .main .inputs .input input {
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  padding: 6px;
+  border: #dedede solid 1px;
+  border-radius: 3px;
+}
+body .top .main .inputs .input input[type=number]:focus {
+  outline: 1px solid #864cff;
+}
+body .top .main .inputs .input input::-webkit-outer-spin-button,
+body .top .main .inputs .input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+body .top .main .inputs .input .nameError {
+  display: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 6px;
+  font-style: oblique;
+  text-transform: none;
+}
+body .top .main .inputs .input .nameError.visible {
+  display: block;
+}
+body .top .main .separator {
+  display: flex;
+}
+body .top .main .separator .separator-line {
+  border: solid 1px #dedede;
+  width: 295px;
+  margin: 25px 0;
+}
+body .top .main .separator .separator-image {
+  background-color: #864cff;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .top .main .separator .separator-image :hover {
+  cursor: pointer;
+  background-color: black;
+}
+body .top .main .separator .separator-image img {
+  padding: 13px;
+  border-radius: 50px;
+}
+body .top .main .result {
+  font-family: "Poppins-ExtraBoldItalic", sans-serif;
+  font-weight: 900;
+  font-size: 54px;
+  font-style: oblique;
+}
+body .top .main .result .result-line {
+  line-height: 60px;
+  display: flex;
+}
+body .top .main .result .result-line p {
+  margin: 0;
+}
+body .top .main .result .result-line :first-child {
+  color: #864cff;
+  letter-spacing: 5px;
+}
+body .top .main .result .result-line :last-child {
+  letter-spacing: -2px;
+}
+body .attribution {
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  color: #898989;
+  margin-bottom: 10px;
+}
+body .attribution a {
+  color: #864cff;
+  text-decoration: none;
+}
+body .attribution a :hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=global.css.map */
