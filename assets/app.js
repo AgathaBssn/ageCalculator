@@ -1,3 +1,6 @@
+document.querySelector('form').addEventListener('submit', (e) => e.preventDefault());
+
+
 //Affichage
 function suivant(enCours, suivant, limite)
 {
@@ -7,7 +10,7 @@ function suivant(enCours, suivant, limite)
 
 //Running calculator and verification
 function checkForm(){
-
+    
     //convert in red
     function convertInRed(day){ 
         document.getElementById(day).style.borderColor = '#ff4b4b';

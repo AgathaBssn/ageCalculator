@@ -1,6 +1,6 @@
 @media only screen and (max-width: 428px) {
   body .top {
-    min-height: calc(100vh - 90px);
+    min-height: calc(100vh - 25px);
   }
   body .top .main .inputs .input {
     width: 60px;
