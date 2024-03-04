@@ -1,4 +1,11 @@
+//Affichage
+function suivant(enCours, suivant, limite)
+{
+    if (enCours.value.length === limite)
+        document.getElementById(suivant).focus();
+}
 
+//Running calculator and verification
 function checkForm(){
 
     //convert in red
